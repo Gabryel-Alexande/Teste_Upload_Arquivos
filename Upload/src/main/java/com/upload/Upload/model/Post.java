@@ -1,4 +1,5 @@
 package com.upload.Upload.model;
+
 import java.io.File;
 import java.io.Serializable;
 
@@ -9,10 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Data;
+
 @Data
 @Entity
-public class Post  implements Serializable{
-	
+public class Post implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -20,15 +22,15 @@ public class Post  implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer  idPost;
-	
+	private Integer idPost;
+
 	@Column(name = "Nome")
 	private String nome;
-	
+
 	@Column(name = "Arquivo")
 	private File arquivo;
-	
-	public Post (String nome , File arquivo ) {
+
+	public Post(String nome, File arquivo) {
 		this.nome = nome;
 		this.arquivo = arquivo;
 	}
