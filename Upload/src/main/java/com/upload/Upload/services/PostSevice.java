@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.upload.Upload.model.Post;
 import com.upload.Upload.repository.PostRepository;
@@ -27,5 +28,16 @@ public class PostSevice {
 		return postRepository.findAll();
 
 	}
+
+//	public void createPostAndADDFiles(MultipartFile[] files) {
+//		for (MultipartFile file: files) {
+//			File arquivo  = new File(file.getOriginalFilename());
+//			
+//			Post post = new Post(file);
+//			postRepository.save(post);
+//		}
+//		
+//		
+//	}
 
 }

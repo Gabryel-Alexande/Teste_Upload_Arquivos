@@ -8,5 +8,5 @@ import com.upload.Upload.model.Post;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Integer> {
-	public Post findByNome(String nome);
+	
 }
