@@ -14,7 +14,6 @@ import com.upload.Upload.controller.UploadController;
 public class UploadApplication {
 
 	public static void main(String[] args) {
-		new File(UploadController.uploadDirectory).mkdir();
 		SpringApplication.run(UploadApplication.class, args);
 	}
 
