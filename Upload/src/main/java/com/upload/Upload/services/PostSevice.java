@@ -28,16 +28,10 @@ public class PostSevice {
 		return postRepository.findAll();
 
 	}
-
-//	public void createPostAndADDFiles(MultipartFile[] files) {
-//		for (MultipartFile file: files) {
-//			File arquivo  = new File(file.getOriginalFilename());
-//			
-//			Post post = new Post(file);
-//			postRepository.save(post);
-//		}
-//		
-//		
-//	}
+	
+	public void salvarPost(Post post) {
+		
+		postRepository.save(post);
+	}
 
 }

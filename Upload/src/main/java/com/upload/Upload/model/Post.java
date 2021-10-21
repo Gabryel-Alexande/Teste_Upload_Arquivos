@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,11 +34,14 @@ public class Post implements Serializable {
 	private String nome;
 
 	@Column(name = "Arquivo")
+	@Lob
 	private File arquivo;
 
 	public Post(String nome, File file) {
 		this.nome = nome;
 		this.arquivo = file;
 	}
+	
+	
 
 }

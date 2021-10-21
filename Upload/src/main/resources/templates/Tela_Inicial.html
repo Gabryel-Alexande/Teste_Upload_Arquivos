@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
 </head>
-
 <body>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="files" multiple>
+  <form th:action="@{/upload/enviar}" method="post" th:object="${post}">
+    <input type="file" name="files" th:field="*{arquivo}">
     <input type="submit" value="Upload Files">
   </form>
 </body>
-
 </html>
